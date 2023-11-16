@@ -5,74 +5,57 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bouncing Ball Animation</title>
     <style>
-        body{
-            background-color: aliceblue;
-        }
 
-        .ball{
-            height: 5vw;
-            width: 5vw;
+        .container{
+            background-color:aliceblue;
+            position: relative;
+            height: 80vh;
+            width: 100vw;
+        }
+        .box{
             background-color: red;
-            border-radius: 50%;
+            height: 121px;
+            width: 121px;
+            border-radius: 70px;
             position: absolute;
             bottom: 0px;
-            left: 10px;
-            animation: labbrow 10s infinite;
-
+            left: 0px;
+            animation: animateX 7s linear infinite, animateY 1s ease-out infinite alternate;
         }
 
-        @keyframes labbrow{
-            0%{
-                bottom: 0px;
-                left: 0px;
-            }
-            30%{
-                bottom: 0px;
-                left: 200px;
-            }
-            40%{
-                bottom: 10px;
-                left: 310px;
-            }
-            60%{
-                bottom: 0px;
-                left: 360px;
-            }
-            70%{
-                bottom: 50px;
-                left: 450px;
-            }
-            75%{
-                bottom: 0px;
-                left: 480px;
-            }
-            80%{
-                bottom: 110px;
-                left: 550px;
-            }
-            83%{
-                bottom: 0px;
-                left: 560px;
-            }
-            87%{
-                bottom: 300px;
-                left: 580px;
-            }
-            90%{
-                bottom: 0px;
-                left: 600px;
-            }
-            99%{
-                bottom: 900px;
-                left: 700px;
-            }
+        @keyframes animateX {
+            from{
+                left: 0%;
 
+            }
+            to{
+                left: 100%;
+
+            }
+            
         }
+
+        @keyframes animateY {
+            from{
+                bottom: 0%;
+
+            }
+            to{
+                bottom: 100%;
+
+            }
+            
+        }
+
 
     </style>
 </head>
 <body>
-<div class="ball"></div>
     
+    <div class="container">
+        <div class="box"></div>
+    </div>
+
+
 </body>
 </html>
